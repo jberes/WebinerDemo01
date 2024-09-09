@@ -147,14 +147,16 @@ export default function MasterView() {
                   <IgrRipple key={uuid()}></IgrRipple>
                 </span>
               </IgrNavDrawerItem>
-              <IgrNavDrawerItem key={uuid()}>
-                <span slot="icon" key={uuid()}>
-                  <span className={classes("material-icons icon_2")} key={uuid()}>
-                    <span key={uuid()}>folder</span>
+              <div style={{display: 'contents'}} onClick={() => navigate(`/master-view/customer-orders`)} key={uuid()}>
+                <IgrNavDrawerItem>
+                  <span slot="icon" key={uuid()}>
+                    <span className={classes("material-icons icon_2")} key={uuid()}>
+                      <span key={uuid()}>folder</span>
+                    </span>
+                    <IgrRipple key={uuid()}></IgrRipple>
                   </span>
-                  <IgrRipple key={uuid()}></IgrRipple>
-                </span>
-              </IgrNavDrawerItem>
+                </IgrNavDrawerItem>
+              </div>
             </div>
             <IgrNavDrawerItem key={uuid()}>
               <span slot="icon" key={uuid()}>
