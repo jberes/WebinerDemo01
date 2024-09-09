@@ -1,5 +1,6 @@
 import { IgrColumn, IgrGrid, IgrGridModule } from 'igniteui-react-grids';
 import { IgrList, IgrListItem, IgrListModule } from 'igniteui-react';
+import { useState } from 'react';
 import { useGetCustomerList, useGetCustomerOrdersResultList } from '../../hooks/northwind-cloud-hooks';
 import 'igniteui-react-grids/grids';
 import styles from './customer-orders.module.css';
@@ -11,8 +12,9 @@ IgrListModule.register();
 export default function CustomerOrders() {
   const classes = createClassTransformer(styles);
   const uuid = () => crypto.randomUUID();
+  const [customerId, setCustomerId] = useState<string | undefined>();
   const { northwindCloudCustomer } = useGetCustomerList();
-  const { northwindCloudCustomerOrdersResult } = useGetCustomerOrdersResultList(undefined);
+  const { northwindCloudCustomerOrdersResult } = useGetCustomerOrdersResultList(customerId as any);
 
   return (
     <>
@@ -20,10 +22,12 @@ export default function CustomerOrders() {
         <div className={classes("column-layout group")}>
           <IgrList className={classes("list")}>
             {northwindCloudCustomer?.map((item) => (
-              <IgrListItem key={uuid()}>
-                <div slot="title" key={uuid()}>{item.companyName}</div>
-                <div slot="subtitle" key={uuid()}>{item.contactName}</div>
-              </IgrListItem>
+              <div style={{display: 'contents'}} onClick={() => setCustomerId(item.customerID)} key={uuid()}>
+                <IgrListItem>
+                  <div slot="title" key={uuid()}>{item.companyName}</div>
+                  <div slot="subtitle" key={uuid()}>{item.contactName}</div>
+                </IgrListItem>
+              </div>
             ))}
           </IgrList>
         </div>
