@@ -1,0 +1,185 @@
+.row-layout {
+  display: flex;
+}
+.backlog-container {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  height: 100%;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.left-nav {
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  overflow: auto;
+  padding: 24px;
+  width: 260px;
+  min-width: 260px;
+  min-height: 50px;
+  max-width: 260px;
+  flex-shrink: 0;
+}
+.right-container {
+  background-color: rgba(96, 96, 96, 0.1);
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+  position: relative;
+  padding: 24px;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.content {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.content-toolbar {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  min-width: 50px;
+  flex-shrink: 0;
+}
+.group {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 8px;
+  position: relative;
+  padding: 0 0 0 8px;
+  min-width: 50px;
+}
+.filters {
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 200px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_2 {
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-start;
+  gap: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.tabs {
+  min-width: 0;
+  min-height: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.h6 {
+  height: max-content;
+  min-width: min-content;
+}
+.avatar::part(base) {
+  color: hsla(var(--ig-surface-500));
+  background-color: hsla(var(--ig-error-500));
+}
+.icon {
+  color: hsla(var(--ig-surface-500));
+}
+.h5 {
+  height: max-content;
+  min-width: min-content;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.icon_1 {
+  color: hsla(var(--ig-gray-600));
+}
+.avatar_1::part(base) {
+  color: hsla(var(--ig-surface-500));
+  background-color: hsla(var(--ig-success-500));
+}
+.avatar_2::part(base) {
+  color: hsla(var(--ig-surface-500));
+  background-color: hsla(var(--ig-warn-500));
+}
+.icon-button {
+  --ig-size: var(--ig-size-small);
+}
+.icon-button_1 {
+  --ig-size: var(--ig-size-small);
+  margin: 0 8px 0 0;
+}
+.tab-item-content {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  height: 100%;
+  min-width: 100%;
+  min-height: 50px;
+  max-height: 100%;
+}
+.icon-button_2::part(base) {
+  color: hsla(var(--ig-gray-600));
+}
+.list {
+  --ig-size: var(--ig-size-small);
+  height: max-content;
+  min-width: min-content;
+}
+.grid {
+  --ig-size: var(--ig-size-medium);
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.grid_1 {
+  --ig-size: var(--ig-size-medium);
+  min-width: 600px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.button {
+  --ig-size: var(--ig-size-medium);
+  width: max-content;
+  height: max-content;
+}
+.button_1 {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+  flex-shrink: 0;
+}
+.input {
+  height: max-content;
+  min-width: 200px;
+  max-width: 400px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
